@@ -1,6 +1,5 @@
 function getData() {
     uName = document.getElementById("uName").value;
-
     followers(uName)
     following(uName)
 
