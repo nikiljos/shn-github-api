@@ -1,5 +1,5 @@
 # Saturday Hack Night Github API
-Repo for participating in Tinkerhub Saturday Hack Night 2  
+A simple site to view the followers and peopled followed by a github user
 ### Team
 - [Nikhil Jose](https://github.com/nikiljos)
 - [Midhun Mathew](https://github.com/memidhun)
