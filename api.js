@@ -23,7 +23,7 @@ async function followers(uName) {
     n = details.length
     for (i = 0; i < n; i++) {
 
-        document.getElementById("followers").innerHTML += `<div class='col-md-4'><div class='card mb-4 box-shadow'><div class='card-body'> <img src="${details[i].avatar_url}" alt="profile" class="profile">${details[i].login}</div> </div> </div>`
+        document.getElementById("followers").innerHTML += `<div class='col-md-4'><div class='card mb-4 box-shadow'><div class='card-body'> <img src="${details[i].avatar_url}" alt="profile" class="profile"><a href="https://github.com/${details[i].login}" target=_blank>${details[i].login}</a></div> </div> </div>`
 
     }
 }
@@ -43,7 +43,7 @@ async function following(uName) {
     console.log(details)
     n = details.length
     for (i = 0; i < n; i++) {
-        document.getElementById("following").innerHTML += `<div class='col-md-4'><div class='card mb-4 box-shadow'><div class='card-body'> <img src="${details[i].avatar_url}" alt="profile" class="profile">${details[i].login}</div> </div> </div>`
+        document.getElementById("following").innerHTML += `<div class='col-md-4'><div class='card mb-4 box-shadow'><div class='card-body'> <img src="${details[i].avatar_url}" alt="profile" class="profile"><a href="https://github.com/${details[i].login}" target=_blank>${details[i].login}</a></div> </div> </div>`
 
     }
 }

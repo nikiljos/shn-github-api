@@ -1,4 +1,4 @@
-# shn-github-api
+# Saturday Hack Night Github API
 Repo for participating in Tinkerhub Saturday Hack Night 2  
 ### Team
 - [Nikhil Jose](https://github.com/nikiljos)
