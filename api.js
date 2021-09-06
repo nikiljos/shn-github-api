@@ -60,7 +60,7 @@ async function followers(uName, page) {
         document.getElementById("followers").innerHTML += `<div class='col-md-4'><div class='card mb-4 box-shadow'><div class='card-body'> <img src="${details[i].avatar_url}" alt="profile" class="profile"><a href="${details[i].html_url}" target=_blank>${details[i].login}</a></div> </div> </div>`
 
     }
-    if (followerPage * 30 <= Cfollowers) {
+    if (displayFollowerCount < Cfollowers) {
         document.getElementById("moreFollowers").innerHTML = `Showing ${displayFollowerCount} of ${Cfollowers}&nbsp;<a href="javascript:followers('${uName}',${followerPage})">Load More...</a>`
     } else {
         document.getElementById("moreFollowers").innerHTML = `Showing ${displayFollowerCount} of ${Cfollowers}`
@@ -90,8 +90,8 @@ async function following(uName, page) {
         document.getElementById("following").innerHTML += `<div class='col-md-4'><div class='card mb-4 box-shadow'><div class='card-body'> <img src="${details[i].avatar_url}" alt="profile" class="profile"><a href="${details[i].html_url}" target=_blank>${details[i].login}</a></div> </div> </div>`
 
     }
-    if (followingPage * 30 < Cfollowing) {
-        document.getElementById("moreFollowing").innerHTML = `Showing ${displayFollowingCount} of ${Cfollowing}&nbsp;<a href="javascript:followers('${uName}',${followingPage})">Load More...</a>`
+    if (displayFollowingCount < Cfollowing) {
+        document.getElementById("moreFollowing").innerHTML = `Showing ${displayFollowingCount} of ${Cfollowing}&nbsp;<a href="javascript:following('${uName}',${followingPage})">Load More...</a>`
     } else {
         document.getElementById("moreFollowing").innerHTML = `Showing ${displayFollowingCount} of ${Cfollowing}`
     }
