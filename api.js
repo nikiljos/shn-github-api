@@ -12,7 +12,7 @@ async function getData() {
     followingPage = 1
     await countFollow(uName)
     document.getElementById("header").innerHTML = `Followers <kbd>${Cfollowers}</kbd>`
-    document.getElementById("heading").innerHTML = `Followers <kbd>${Cfollowing}</kbd>`
+    document.getElementById("heading").innerHTML = `Following <kbd>${Cfollowing}</kbd>`
 
     followers(uName, 1)
     following(uName, 1)
