@@ -7,6 +7,10 @@ async function getData() {
     displayFollowingCount = 0;
     document.getElementById("followers").innerHTML = ""
     document.getElementById("following").innerHTML = ""
+    document.getElementById("moreFollowing").innerHTML = ""
+    document.getElementById("moreFollowers").innerHTML = ""
+    document.getElementById("header").innerHTML = ""
+    document.getElementById("heading").innerHTML = ""
     uName = document.getElementById("uName").value;
     followerPage = 1
     followingPage = 1
@@ -27,6 +31,11 @@ async function countFollow(uName) {
             document.getElementById("header").setAttribute("style", "visibility: visible");
             return value.data
         })
+        .catch(err => {
+            alert("Seems like you entered an invalid username");
+            return;
+        })
+
 
     Cfollowers = details.followers;
     Cfollowing = details.following;
@@ -46,7 +55,6 @@ async function followers(uName, page) {
         })
         .catch(err => {
             document.getElementById("header").setAttribute("style", "visibility: hidden");
-            alert("Seems like you entered an invalid username")
 
         })
 
